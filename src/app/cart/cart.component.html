@@ -1,0 +1,15 @@
+
+<div class="cart" *ngIf="items.length > 0; else emptyCart">
+  Total items in the cart: {{items.length}}
+  <button (click)="onExpand()">{{ expanded ? 'Collapse' : 'Expand' }} cart</button>
+  <button (click)="onClearCart()">Clear cart</button>
+  <div *ngIf="expanded">
+    Items in the cart: 
+      <ul>
+        <li *ngFor="let item of items">{{item.name}} for {{item.price}}$</li>
+      </ul>
+  </div>
+</div>
+<ng-template #emptyCart>
+  The cart is empty
+</ng-template>

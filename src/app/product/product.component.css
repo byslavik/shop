@@ -1,0 +1,7 @@
+.item {
+  display: inline-block;
+  width: 200px;
+  padding: 10px;
+  border: 1px solid lightgray;
+  vertical-align: top;
+}

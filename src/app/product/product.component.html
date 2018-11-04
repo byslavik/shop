@@ -1,0 +1,8 @@
+<div class="item">
+  <h2>{{name}}</h2>
+  <i>{{Category[category]}}</i>
+  <p>{{description}}</p>
+  <p>Price: {{price}}$</p>
+  <b>This product is {{ isAvailable ? '' : 'not ' }} available</b>
+  <button *ngIf='isAvailable' (click)="onBuy()">Buy</button>
+</div>
