@@ -1,0 +1,6 @@
+
+<p>
+  {{item.name}} for {{item.price}}$ x {{item.quantity}} = {{item.price * item.quantity}}$
+<button (click)="onRemoveItem()">remove</button>
+<app-cart-item-qnty [item]="item" (change)="onChangeItemState($event)"></app-cart-item-qnty>
+</p>

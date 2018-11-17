@@ -1,0 +1,7 @@
+:host.hoverItem p {
+  background: red;
+}
+
+:host.clickItem p {
+  background: green;
+}

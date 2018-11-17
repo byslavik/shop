@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { ProductItem, Category } from './product.models'
+import { ProductModel, Category } from './product-list/product/product.models'
 
-const items:ProductItem[] = [{
+const items:ProductModel[] = [{
+  id: 0,
   name: 'Product1',
   description: 'Lorem ipsum dolor sit',
   price: 10,
@@ -9,6 +10,7 @@ const items:ProductItem[] = [{
   isAvailable: true
 },
 {
+  id: 1,
   name: 'Product2',
   description: 'Lorem ipsum dolor sit',
   price: 10,
@@ -16,6 +18,7 @@ const items:ProductItem[] = [{
   isAvailable: true
 },
 {
+  id: 2,
   name: 'Product3',
   description: 'Lorem ipsum dolor sit',
   price: 103,
@@ -23,6 +26,7 @@ const items:ProductItem[] = [{
   isAvailable: true
 },
 {
+  id: 3,
   name: 'Product4',
   description: 'Lorem ipsum dolor sit',
   price: 1,
@@ -30,6 +34,7 @@ const items:ProductItem[] = [{
   isAvailable: false
 },
 {
+  id: 4,
   name: 'Product5',
   description: 'Lorem ipsum dolor sit',
   price: 107,
@@ -37,6 +42,7 @@ const items:ProductItem[] = [{
   isAvailable: true
 },
 {
+  id: 5,
   name: 'Product6',
   description: 'Lorem ipsum dolor sit',
   price: 110,
@@ -49,7 +55,7 @@ export class ProductService {
 
   constructor() { }
 
-  getItems():ProductItem[] {
+  getItems():ProductModel[] {
     return items
   }
 }

@@ -1,0 +1,4 @@
+
+<app-product
+  *ngFor='let item of items'
+  [item]='item' (buy)='onBuy($event)'></app-product>

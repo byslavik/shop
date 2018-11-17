@@ -1,0 +1,5 @@
+<ul>
+  <li *ngFor="let item of items">
+    <app-cart-item appHoverItem [item]="item" (change)="onChangeItemState($event)"></app-cart-item>
+  </li>
+</ul>
