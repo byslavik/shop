@@ -1,4 +1,4 @@
-import { ProductModel } from '../../../products/product-list/product/product.models'
+import { ProductModel } from '../../../products/product-list/product/product.models';
 
 
 export class CartItemModel extends ProductModel {
@@ -12,7 +12,7 @@ export class CartItemModel extends ProductModel {
     public category?: ProductModel['category'],
 
   ) {
-    super(id, name, description, price, isAvailable, category)
+    super(id, name, description, price, isAvailable, category);
   }
 }
 

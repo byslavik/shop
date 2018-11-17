@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { ProductModel, Category } from './product-list/product/product.models'
+import { ProductModel, Category } from './product-list/product/product.models';
 
-const items:ProductModel[] = [{
+const items: ProductModel[] = [{
   id: 0,
   name: 'Product1',
   description: 'Lorem ipsum dolor sit',
@@ -48,14 +48,14 @@ const items:ProductModel[] = [{
   price: 110,
   category: Category.KITCHEN,
   isAvailable: false
-}]
+}];
 
 @Injectable()
 export class ProductService {
 
   constructor() { }
 
-  getItems():ProductModel[] {
-    return items
+  getItems(): ProductModel[] {
+    return items;
   }
 }

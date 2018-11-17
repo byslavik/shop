@@ -10,6 +10,6 @@ export class AppComponent implements AfterViewInit {
   titleElement: ElementRef;
 
   ngAfterViewInit() {
-    (<HTMLInputElement>this.titleElement.nativeElement).innerText = 'My Test Shop'
+    (<HTMLInputElement>this.titleElement.nativeElement).innerText = 'My test Shop';
   }
 }

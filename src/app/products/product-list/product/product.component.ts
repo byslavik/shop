@@ -1,5 +1,5 @@
 import { Component, Output, Input, EventEmitter } from '@angular/core';
-import { ProductModel, Category } from './product.models'
+import { ProductModel, Category } from './product.models';
 
 @Component({
   selector: 'app-product',
@@ -8,8 +8,8 @@ import { ProductModel, Category } from './product.models'
 })
 
 export class ProductComponent {
-  Category = Category
-  @Input() item: ProductModel
+  Category = Category;
+  @Input() item: ProductModel;
 
   @Output()
   buy: EventEmitter<ProductModel> = new EventEmitter<ProductModel>();

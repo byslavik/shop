@@ -4,26 +4,26 @@ import { Directive, HostBinding, HostListener } from '@angular/core';
   selector: '[appHoverItem]'
 })
 export class HoverItemDirective {
-  private className = ''
+  private className = '';
 
   @HostBinding('class') get getClassName() {
-    return this.className
+    return this.className;
   }
 
   @HostListener('mouseenter', ['$event'])
   enter(event: Event) {
-    this.className = 'hoverItem'
+    this.className = 'hoverItem';
   }
 
   @HostListener('mouseleave', ['$event'])
   leave(event: Event) {
-    this.className = ''
+    this.className = '';
   }
 
 
   @HostListener('mousedown', ['$event'])
   down(event: Event) {
-    this.className = 'clickItem'
+    this.className = 'clickItem';
   }
 
 }

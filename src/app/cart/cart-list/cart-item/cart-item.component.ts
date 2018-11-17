@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { CartItemModel, CartEventModel, CartActions } from '../../cart-list/cart-item/cart-item.model'
+import { CartItemModel, CartEventModel, CartActions } from '../../cart-list/cart-item/cart-item.model';
 
 @Component({
   selector: 'app-cart-item',
@@ -7,7 +7,7 @@ import { CartItemModel, CartEventModel, CartActions } from '../../cart-list/cart
   styleUrls: ['./cart-item.component.css']
 })
 export class CartItemComponent implements OnInit {
-  @Input() item: CartItemModel
+  @Input() item: CartItemModel;
 
   constructor() { }
 
