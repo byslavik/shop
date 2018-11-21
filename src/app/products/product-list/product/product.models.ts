@@ -1,8 +1,8 @@
 
 export enum Category {
-  'CAR',
-  'KITCHEN',
-  'HOME'
+  'Car',
+  'Kitchen',
+  'Home'
 }
 
 export class ProductModel {
@@ -11,8 +11,9 @@ export class ProductModel {
     public name: string,
     public description: string,
     public price: number,
-    public isAvailable: boolean,
-    public category?: Category
+    public availability: boolean,
+    public category?: Category,
+    public updatedDate?: number,
   ) {
 
   }

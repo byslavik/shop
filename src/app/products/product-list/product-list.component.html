@@ -1,4 +1,10 @@
+<div class="product-items-list" *ngIf="items | async; else loading">
+    <app-product
+    *ngFor='let item of items | async'
+    [item]='item' (buy)='onBuy($event)'></app-product>
+</div>
 
-<app-product
-  *ngFor='let item of items'
-  [item]='item' (buy)='onBuy($event)'></app-product>
+
+<ng-template #loading>
+  Loading of product items...
+</ng-template>

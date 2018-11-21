@@ -7,12 +7,12 @@ export class CartItemModel extends ProductModel {
     public name: string,
     public description: string,
     public price: number,
-    public isAvailable: boolean,
+    public availability: boolean,
     public quantity: number,
     public category?: ProductModel['category'],
 
   ) {
-    super(id, name, description, price, isAvailable, category);
+    super(id, name, description, price, availability, category);
   }
 }
 

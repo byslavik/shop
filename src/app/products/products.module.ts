@@ -7,7 +7,7 @@ import { ProductService } from './products.service';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
   ],
   declarations: [
     ProductComponent,

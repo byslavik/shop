@@ -7,6 +7,8 @@ import { CartItemModel, CartEventModel } from '../cart-list/cart-item/cart-item.
   styleUrls: ['./cart-list.component.css']
 })
 export class CartListComponent implements OnInit {
+  sortKey = 'price';
+  sortKeys: Array<string> = ['price', 'name', 'quantity'];
   @Input() items: CartItemModel[];
 
   constructor() { }
@@ -18,5 +20,9 @@ export class CartListComponent implements OnInit {
 
   onChangeItemState(event): void {
     this.change.emit(event);
+  }
+
+  setOrderProperty(value) {
+    this.sortKey = value;
   }
 }

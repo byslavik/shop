@@ -3,51 +3,53 @@ import { ProductModel, Category } from './product-list/product/product.models';
 
 const items: ProductModel[] = [{
   id: 0,
-  name: 'Product1',
-  description: 'Lorem ipsum dolor sit',
-  price: 10,
-  category: Category.CAR,
-  isAvailable: true
+  name: 'Motor Oil',
+  description: '5w40',
+  price: 40,
+  category: Category.Car,
+  availability: true,
+  updatedDate: 1542800764457
 },
 {
   id: 1,
-  name: 'Product2',
-  description: 'Lorem ipsum dolor sit',
-  price: 10,
-  category: Category.HOME,
-  isAvailable: true
+  name: 'Samsung TV',
+  description: '46" OLED',
+  price: 455,
+  category: Category.Home,
+  availability: true
 },
 {
   id: 2,
-  name: 'Product3',
-  description: 'Lorem ipsum dolor sit',
-  price: 103,
-  category: Category.CAR,
-  isAvailable: true
+  name: 'Tools',
+  description: '34 items',
+  price: 55,
+  category: Category.Car,
+  availability: true
 },
 {
   id: 3,
-  name: 'Product4',
-  description: 'Lorem ipsum dolor sit',
-  price: 1,
-  category: Category.HOME,
-  isAvailable: false
+  name: 'Chair',
+  description: 'Big and soft',
+  price: 25,
+  category: Category.Home,
+  availability: false,
+  updatedDate: 1542400764457
 },
 {
   id: 4,
-  name: 'Product5',
-  description: 'Lorem ipsum dolor sit',
-  price: 107,
-  category: Category.CAR,
-  isAvailable: true
+  name: 'Lights',
+  description: 'Ambient light',
+  price: 10,
+  category: Category.Car,
+  availability: true
 },
 {
   id: 5,
-  name: 'Product6',
-  description: 'Lorem ipsum dolor sit',
-  price: 110,
-  category: Category.KITCHEN,
-  isAvailable: false
+  name: 'Forks',
+  description: '13 items',
+  price: 65,
+  category: Category.Kitchen,
+  availability: false
 }];
 
 @Injectable()
@@ -55,7 +57,11 @@ export class ProductService {
 
   constructor() { }
 
-  getItems(): ProductModel[] {
-    return items;
+  getItems(): Promise<ProductModel[]> {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(items);
+      }, 3000);
+    });
   }
 }

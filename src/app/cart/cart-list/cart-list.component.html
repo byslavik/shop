@@ -1,5 +1,7 @@
+
+Order By: <app-order-by [keys]="sortKeys" (orderBy)="setOrderProperty($event)"></app-order-by>
 <ul>
-  <li *ngFor="let item of items">
+  <li *ngFor="let item of items | orderBy: sortKey">
     <app-cart-item appHoverItem [item]="item" (change)="onChangeItemState($event)"></app-cart-item>
   </li>
 </ul>

@@ -1,0 +1,3 @@
+<select name="orderBy" id="orderBy" (change)="onValueChange($event.target.value)">
+  <option *ngFor="let key of keys">{{ key }}</option>
+</select>
